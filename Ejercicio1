@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int vector[100];
+    int n, i, posicion;
+
+    printf("Ingrese la cantidad de datos: ");
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++) {
+        printf("Ingrese el dato %d: ", i + 1);
+        scanf("%d", &vector[i]);
+    }
+
+    printf("\nIngrese la posicion del dato que quiere consultar (1-%d): ", n);
+    scanf("%d", &posicion);
+
+    if (posicion >= 1 && posicion <= n) {
+        printf("El dato elegido es: %d\n", vector[posicion - 1]);
+    } else {
+        printf("Posicion invalida.\n");
+    }
+
+    printf("\nEl programa ha terminado.\n");
+
+    return 0;
+}
